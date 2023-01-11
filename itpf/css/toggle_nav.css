@@ -1,0 +1,126 @@
+@media only screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    right: -320px; /* 右から出てくる */
+    top: 0;
+    width: 300px; /* スマホに収まるサイズ */
+    height: 100vh;
+    padding-top: 60px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+  .hamburger {
+    position: absolute;
+    right: 3%;
+    top: 0%;
+    width: 8vw; /* クリックしやすい幅 */
+    height: 8vw; /* クリックしやすい高さ */
+    cursor: pointer;
+    z-index: 300;
+  }
+
+
+  .hamburger_border {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all .6s;
+  }
+
+  .hamburger_border_top {
+    top: 3vw;
+  }
+  .hamburger_border_center {
+    top: 4vw;
+  }
+  .hamburger_border_bottom {
+    top: 5vw;
+  }
+
+  .g_nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: none;
+  }
+
+  .g_nav li {
+  width: 95%;
+  text-align: center;
+  float: left;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+  .g_nav img{
+    width: 40%;
+  text-align: center;
+  }
+
+  .nav_item {
+    text-align: center;
+    padding: 0 14px;
+  }
+
+  .nav_item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+  }
+
+    .nav_item a:last-child{
+    display: block;
+    text-decoration: none;
+
+  }
+
+  .nav_item a:hover {
+    background-color: #eee;
+  }
+
+
+  .black_bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+
+  /* 表示された時用のCSS */
+  .nav-open .nav {
+    right: 0;
+  }
+  .nav-open .black_bg {
+    opacity: .8;
+    visibility: visible;
+  }
+  .nav-open .hamburger_border_top {
+    transform: rotate(45deg);
+    top: 20px;
+    background-color: #333;
+  }
+  .nav-open .hamburger_border_center {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger_border_bottom {
+    transform: rotate(-45deg);
+    top: 20px;
+    background-color: #333;
+  }
+}/* sp */
+
+
+
